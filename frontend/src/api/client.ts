@@ -12,7 +12,7 @@ import type {
   TravelerPreferenceProfile,
 } from "../types";
 
-export const API_BASE = "/api";
+export const API_BASE = import.meta.env.VITE_API_BASE_URL || "/api";
 
 async function parse<T>(res: Response): Promise<T> {
   if (!res.ok) {
